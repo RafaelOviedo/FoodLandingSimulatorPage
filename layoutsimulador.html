@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="layoutsimulador.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <!-- EMPIEZA LA NAVBAR -->
+
+        <nav id="nav-bar">
+            <div id="logo">LOGO</div>
+            <ul id="nav-list">
+                <li><a class="nav-link" href="#welcome-section">Home</a></li>
+                <li>
+                    <a class="nav-link" href="#choosing-section"
+                        >Choosing Section</a
+                    >
+                </li>
+                <li>
+                    <a class="nav-link" href="#about-us-section">About us</a>
+                </li>
+                <li><a class="nav-link" href="#footer">Footer</a></li>
+            </ul>
+        </nav>
+
+        <!-- TERMINA LA NAVBAR -->
+
+        <!-- LATERAL BAR  -->
+
+        <div id="lateral-bar">
+            <div id="close-btn" onclick="closeLateralBar()">&times;</div>
+            <div id="cart-text">Cart</div>
+            <div class="cart-box-items"></div>
+            <div>
+                <strong class="totalTitle">Total:</strong>
+                <span class="totalPrice">$0</span>
+            </div>
+            <button class="purchase-btn">Purchase</button>
+        </div>
+        <!-- LATERAL BAR  -->
+
+        <!-- CART BUTTON -->
+
+        <box-icon id="cart-btn" onclick="openLateralBar()">
+            <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABl0lEQVRIS+2V8TFDQRCHv1SAClABKkAFpAJUgApQASpABaQDKqADdEAH5svcZY53ee/uIfmDnckkk9m7b3+7e7sD5mSDOXH5B88s82mqT4GTXyS/AdvAk4xZguUdAxdfwVuAH83vzfD7EjDavpbetZFTnF68C9yGPw6A675U4A7YAV6BlXhP23N6AZaB+1CbvmyztQDcAPslYGtxGBxXAQOptTRzw6B+fEeb4nXgMZAmTVFJToNfSnula3LZ+mtBraprLZbrIWncTsU6HAHngWZ9atK9mKS2kbEuxXbhc63MjH+jR7rA3hGfQ1++c8DMfbISsCm+CqfOwvMqDcLSZMtTArZWHm68xVJ6zq8E7Dkn1164wLSNB32BvU/zLQXbZMJUXWONZxQPl4L1d6DYaI7RUvsRcIQZgHUvMed0tiw1iiPI+WvKR5l1aUncRCpt7YNacDrJBBtEanET+d9k936nq+PZdJjYsWnK06Wif+tiqVWcrrncRIpLxaAMZOpsrwWrRJVxqOSyKLDznfcBl3Rzp8/fA38AfQ1IH6ifylIAAAAASUVORK5CYII="
+            />
+        </box-icon>
+        <span class="cart-counter">0</span>
+
+        <!-- CART BUTTON  -->
+
+        <!-- EMPIEZA LA WELCOME SECTION  -->
+
+        <section id="welcome-section">
+            <img
+                id="top-image"
+                src="https://wallpaperaccess.com/full/424516.jpg"
+                alt="pizza photo background"
+            />
+            <h1 id="welcome-text">
+                Welcome to "App's name", to make your order press start!
+            </h1>
+        </section>
+
+        <div id="button-box">
+            <button id="start-button">
+                <a class="button-link" href="#choosing-section">Start</a>
+            </button>
+        </div>
+
+        <!-- TERMINA LA WELCOME SECTION  -->
+
+        <!-- EMPIEZA LA CHOOSING SECTION  -->
+
+        <section id="choosing-section">
+            <div id="menu-container">
+                <img
+                    id="choosing-section-image"
+                    src="https://img5.goodfon.com/wallpaper/nbig/a/c8/burgery-gamburgery-fastfud.jpg"
+                    alt="burguer photo background"
+                />
+
+                <div id="items-box">
+                    <div class="titulo">What are you going to eat today?</div>
+                    <div class="pizzas">Pizzas to choose</div>
+
+                    <!-- definiendo items dentro del menu -->
+
+                    <div class="muzza all-items">
+                        <img
+                            src="https://images.unsplash.com/photo-1615516687220-68f5fb1c1b31?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTZ8fHBpenphJTIwbW96emFyZWxsYXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="pizza mozzarella photo"
+                            class="item-image"
+                            id="pizza-muzza"
+                        />
+                        <h3 class="item-title">Mozzarella</h3>
+                        <p class="item-price">490$</p>
+                        <button onclick="cartCounter()" class="add-to-cart-btn">
+                            Add to cart
+                        </button>
+                    </div>
+                    <div class="napo all-items">
+                        <img
+                            src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fHRvbWF0byUyMHBpenphfGVufDB8MnwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="pizza napo photo"
+                            class="item-image"
+                        />
+                        <h3 class="item-title">Neapolitan</h3>
+                        <p class="item-price">530$</p>
+                        <button class="add-to-cart-btn">Add to cart</button>
+                    </div>
+                    <div class="fugazzeta all-items">
+                        <img
+                            src="http://embed.widencdn.net/img/beef/pz4eba64j5/exact/beef-pepper-and-onion-pizza-horizontal.tif?keep=c&u=7fueml"
+                            alt="pizza fugazzeta photo"
+                            class="item-image"
+                        />
+                        <h3 class="item-title">Fugazzeta</h3>
+                        <p class="item-price">500$</p>
+                        <button class="add-to-cart-btn">Add to cart</button>
+                    </div>
+                    <div class="jamon-y-morron all-items">
+                        <img
+                            src="https://www.thespruceeats.com/thmb/YOqlotMR-hYHWCraqecMRZJa-5U=/2492x1869/smart/filters:no_upscale()/Prosciuttopizzahoriz-d8f1759cf683436aae8f2d184b3267fb.jpg"
+                            alt="pizza jamon y morron photo"
+                            class="item-image"
+                        />
+                        <h3 class="item-title">Ham and bell pepper</h3>
+                        <p class="item-price">530$</p>
+                        <button class="add-to-cart-btn">Add to cart</button>
+                    </div>
+
+                    <div class="burgers">Hamburgers to choose</div>
+
+                    <div class="simple all-items">
+                        <img
+                            src="https://media.timeout.com/images/105305545/630/472/image.jpg"
+                            alt="burger simple photo"
+                            class="item-image"
+                        />
+                        <h3 class="item-title">Simple</h3>
+                        <p class="item-price">420$</p>
+                        <button class="add-to-cart-btn">Add to cart</button>
+                    </div>
+                    <div class="doble all-items">
+                        <img
+                            src="https://i.guim.co.uk/img/media/8e2f6ac9af1c5dffda6bc49bb10cd9871f471ab7/0_139_2085_1251/master/2085.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=2fa78672f62d806b6d7b93f255a6af6b"
+                            alt="burger doble photo"
+                            class="item-image"
+                        />
+                        <h3 class="item-title">Double</h3>
+                        <p class="item-price">490$</p>
+                        <button class="add-to-cart-btn">Add to cart</button>
+                    </div>
+                    <div class="cheddar all-items">
+                        <img
+                            src="https://www.liverpool-one.com/wp-content/uploads/2016/10/Byron-burger-e1584466269124.jpg"
+                            alt="burger cheddar photo"
+                            class="item-image"
+                        />
+                        <h3 class="item-title">Cheddar</h3>
+                        <p class="item-price">550$</p>
+                        <button class="add-to-cart-btn">Add to cart</button>
+                    </div>
+                    <div class="doble-cheddar all-items">
+                        <img
+                            src="https://images.unsplash.com/photo-1580372647279-e3af83eacec5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjB8fGRvYmxlJTIwY2hlZGRhciUyMGJ1cmdlcnxlbnwwfDJ8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="burger doble cheddar photo"
+                            class="item-image"
+                        />
+                        <h3 class="item-title">Double Cheddar</h3>
+                        <p class="item-price">610$</p>
+                        <button class="add-to-cart-btn">Add to cart</button>
+                    </div>
+
+                    <div class="bebidas">Drinks to choose</div>
+
+                    <div class="coca-lata all-items">
+                        <img
+                            src="https://images.unsplash.com/photo-1514178255089-603d3a35b24a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FuJTIwb2YlMjBjb2tlfGVufDB8MnwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="can of coke photo"
+                            class="item-image"
+                        />
+                        <h3 class="item-title">Canned Coke</h3>
+                        <p class="item-price">60$</p>
+                        <button class="add-to-cart-btn">Add to cart</button>
+                    </div>
+                    <div class="sevenup-lata all-items">
+                        <img
+                            src="https://st3.depositphotos.com/4021141/18747/i/600/depositphotos_187471326-stock-photo-7up-non-caffeinated-soft-drink.jpg"
+                            alt="can of 7up photo"
+                            class="item-image"
+                        />
+                        <h3 class="item-title">Canned 7up</h3>
+                        <p class="item-price">60$</p>
+                        <button class="add-to-cart-btn">Add to cart</button>
+                    </div>
+                    <div class="fanta-lata all-items">
+                        <img
+                            src="https://us.123rf.com/450wm/spflaum/spflaum1103/spflaum110300123/9158049-fanta-orange-drink-studio-shot-on-table-top.jpg?ver=6"
+                            alt="can of fanta photo"
+                            class="item-image"
+                        />
+                        <h3 class="item-title">Canned Fanta</h3>
+                        <p class="item-price">60$</p>
+                        <button class="add-to-cart-btn">Add to cart</button>
+                    </div>
+                    <div class="pepsi-lata all-items">
+                        <img
+                            src="https://harryandlarrys.square.site/uploads/1/3/1/2/131251354/s868400964849929034_p1180_i1_w676.jpeg"
+                            alt="can of pepsi photo"
+                            class="item-image"
+                        />
+                        <h3 class="item-title">Canned Pepsi</h3>
+                        <p class="item-price">60$</p>
+                        <button class="add-to-cart-btn">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TERMINA LA CHOOSING SECTION  -->
+
+        <!-- EMPIEZA ABOUT US SECTION  -->
+
+        <section id="about-us-section">
+            <div id="about-us-box">
+                <img
+                    id="about-us-image"
+                    src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                    alt="burger with knife photo"
+                />
+                <h2 id="about-us-title">About us</h2>
+                <p id="about-us-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Saepe, dolore corporis. Rerum suscipit labore eveniet
+                    aliquid! Et, incidunt consectetur. Excepturi aperiam libero
+                    consequuntur ea similique amet reprehenderit molestiae, sint
+                    quam?. <br />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Architecto ducimus natus earum. Velit quos ad fuga rem
+                    excepturi officiis minus odio quis veniam. Nihil, aspernatur
+                    cum quia cupiditate expedita eius.
+                </p>
+                <ul class="socialMediaBox">
+                    <li>
+                        <a target="_blank" href="https://codepen.io/dgtgnd">
+                            <img
+                                class="codepenLogo"
+                                src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-Black-Large.png"
+                                alt="codepen logo"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            target="_blank"
+                            href="https://github.com/RafaelOviedo"
+                        >
+                            <img
+                                class="githubLogo"
+                                src="https://pngimg.com/uploads/github/github_PNG58.png"
+                                alt="github logo"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            target="_blank"
+                            href="https://www.instagram.com/dgtgnd/"
+                        >
+                            <img
+                                class="instagramLogo"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGvnf8ZiiTL74jY3242kvO2bBstJTyfyo-WA&usqp=CAU"
+                                alt="instagram logo"
+                            />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- TERMINA ABOUT US SECTION  -->
+
+        <!-- EMPIEZA NEW MENU SECTION  -->
+
+        <section class="new-menu-section">
+            <div class="menu-section-box">
+                <p class="new-list-p">Check the coming soon pizzas:</p>
+                <button class="check-btn">Check</button>
+                <div class="arrow">➡️</div>
+                <ol class="new-food-list"></ol>
+            </div>
+        </section>
+
+        <!-- TERMINA NEW MENU SECTION  -->
+
+        <!-- EMPIEZA FOOTER  -->
+
+        <footer id="footer">
+            <p>Project for CoderHouse, by Rafael Oviedo.</p>
+        </footer>
+
+        <!-- TERMINA FOOTER  -->
+        <script src="layoutsimulador.js"></script>
+    </body>
+</html>
