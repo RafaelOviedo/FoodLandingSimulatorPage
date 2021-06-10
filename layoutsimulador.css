@@ -222,7 +222,7 @@ body {
     filter: brightness(60%);
 }
 
-.cart-counter {
+/* #cart-counter {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,12 +231,12 @@ body {
     left: 95%;
     width: 20px;
     height: 20px;
-    border: 2px solid #e91500;
+    border: 2px solid #e91500; 
     border-radius: 50%;
     background: white;
     margin: 0;
     z-index: 1000;
-}
+} */
 
 /* CONFIGURANDO EL WELCOME SECTION, FONDO Y TEXTO  */
 

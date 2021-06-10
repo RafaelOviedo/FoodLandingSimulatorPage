@@ -1,12 +1,4 @@
-// if (document.readyState === "loading") {
-//     document.addEventListener("DOMContentLoaded", ready);
-// } else {
-//     ready();
-// }
-
-// function ready() {
-// window.onload = () => {
-// Listeners
+// // Listeners
 let removeCartItemBtns = document.getElementsByClassName(".remove-btn");
 for (let i = 0; i < removeCartItemBtns.length; i++) {
     let button = removeCartItemBtns[i];
@@ -140,7 +132,6 @@ function cartCounter() {
         cartCounter.innerText = counter;
     });
 }
-
 // funcionalidad del lateral bar
 function closeLateralBar() {
     $("#lateral-bar").css("width", "0px");
@@ -170,4 +161,3 @@ $(".check-btn").click(function () {
         }
     );
 });
-// };
