@@ -146,18 +146,18 @@ function openLateralBar() {
 
 // Llamada a la API
 
-$(".check-btn").click(function () {
-    $(".new-food-list").empty();
-    $.get(
-        "https://private-anon-f8405e8ba0-pizzaapp.apiary-mock.com/restaurants/restaurantId/menu?category=Pizza&orderBy=rank",
-        function (data) {
-            data.forEach((item) => {
-                $(".new-food-list").append(
-                    "<li class='list-item'>" +
-                        JSON.stringify(item.name) +
-                        "</li>"
-                );
-            });
-        }
-    );
-});
+// $(".check-btn").click(function () {
+//     $(".new-food-list").empty();
+//     $.get(
+//         "https://private-anon-f8405e8ba0-pizzaapp.apiary-mock.com/restaurants/restaurantId/menu?category=Pizza&orderBy=rank",
+//         function (data) {
+//             data.forEach((item) => {
+//                 $(".new-food-list").append(
+//                     "<li class='list-item'>" +
+//                         JSON.stringify(item.name) +
+//                         "</li>"
+//                 );
+//             });
+//         }
+//     );
+// });
