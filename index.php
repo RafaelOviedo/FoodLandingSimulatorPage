@@ -1,5 +1,5 @@
 <?php 
 
-include_once("techdoc.html");
+include_once("layoutsimulador.html");
 
 ?>
